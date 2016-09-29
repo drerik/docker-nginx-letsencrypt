@@ -10,4 +10,4 @@ else
 fi
 
 echo "Launcing nginx."
-eval nginx -g daemon off;
+eval nginx -g 'daemon off';
