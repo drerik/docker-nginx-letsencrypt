@@ -8,7 +8,7 @@ then
   fi
 
   certbot -n certonly --agree-tos --standalone -t -m "$LETS_ENCRYPT_EMAIL" -d $(hostname -f) $DOMAIN_CMD
-  ls -s /etc/letsencrypt/live/$(hostname -f) /etc/letsencrypt/certs
+  ln -s /etc/letsencrypt/live/$(hostname -f) /etc/letsencrypt/certs
 else
   certbot renew
 fi
