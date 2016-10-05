@@ -4,7 +4,7 @@ MAINTAINER Erik Kaareng-Sunde <esu@enonic.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apk update && apk add ca-certificates wget certbot
+RUN apk update && apk add ca-certificates openssl certbot
 
 RUN cd /etc/ssl/certs && openssl dhparam -out dhparam.pem 2048
 
