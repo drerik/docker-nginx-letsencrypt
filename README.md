@@ -13,7 +13,7 @@ docker run -d --volumes-from nginxstorage --restart always \
   -e LETS_ENCRYPT_EMAIL="your@email.com" \
   -e LETS_ENCRYPT_DOMAINS="yourserver.com,site2.yourserver.com" \
   -p "80:80" -p "443:443" \
-  --name nginx enoniccloud/nginx-letsencrypt
+  --name nginx drerik/nginx-letsencrypt
 ```
 
 ### Setting up with docker-compose
@@ -40,9 +40,9 @@ nginx:
       - "/etc/letsencrypt"
       - "/var/lib/letsencrypt"
 ```
-- Create the folder `nginx` in your docker-compose setup, add a `Dockerfile` that Uses the `enoniccloud/nginx-letsencrypt` image and other modifications to your setup.
+- Create the folder `nginx` in your docker-compose setup, add a `Dockerfile` that Uses the `drerik/nginx-letsencrypt` image and other modifications to your setup.
 ```
-FROM enoniccloud/nginx-letsencrypt
+FROM drerik/nginx-letsencrypt
 
 COPY nginx-default.conf /etc/nginx/conf.d/default.conf
 
