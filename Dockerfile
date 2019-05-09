@@ -1,6 +1,6 @@
 FROM nginx:stable-alpine
 
-MAINTAINER Erik Kaareng-Sunde <esu@enonic.com>
+MAINTAINER Erik Kaareng-Sunde <erik@eriksunde.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
